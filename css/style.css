@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5vw;
+  padding: 5vw 8vw;
+  min-height: 100vh;
+  background-color: #abd1c6;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 50px);
+  grid-template-areas: "title title" "item item-text" "attribute attribute-value" "add-btn add-btn";
+  gap: 2vw;
+  padding: 20px;
+  background-color: #004643;
+  -webkit-box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+          box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+}
+.form__title {
+  grid-area: title;
+  text-align: center;
+  color: #fffffe;
+}
+.form__item {
+  grid-area: item;
+}
+.form__item-text {
+  grid-area: item-text;
+}
+.form__attribute {
+  grid-area: attribute;
+}
+.form__attribute-value {
+  grid-area: attribute-value;
+}
+.form__add-btn {
+  grid-area: add-btn;
+}
+.form__item-name {
+  grid-area: item-name;
+}
+.form__find-btn {
+  grid-area: find-btn;
+}
+.form--search {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 50px);
+  grid-template-areas: "title" "item-name" "find-btn";
+}
+
+.input {
+  background-color: #fffffe;
+  border-color: #fffffe;
+  color: #004643;
+  font-weight: bold;
+  -webkit-box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+          box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+  border-width: 0;
+  padding: 0 5px;
+}
+
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background-color: #f9bc60;
+  border-width: 0;
+  color: #001e1d;
+  -webkit-box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+          box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.result,
+.content {
+  grid-column: 1/-1;
+  background-color: #001e1d;
+  color: #fffffe;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.result__number-info {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 10px 0;
+}
+.result__element-desc {
+  padding: 0 5px;
+}/*# sourceMappingURL=style.css.map */

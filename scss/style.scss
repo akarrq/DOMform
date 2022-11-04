@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+
+$main-color: #004643;
+$headline-color: #fffffe;
+$btn-color: #f9bc60;
+$btn-text-color: #001e1d;
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 5vw;
+  padding: 5vw 8vw;
+  min-height: 100vh;
+  background-color: #abd1c6;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 50px);
+  grid-template-areas:
+    "title title"
+    "item item-text"
+    "attribute attribute-value"
+    "add-btn add-btn";
+  gap: 2vw;
+  padding: 20px;
+  background-color: $main-color;
+  box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+  &__title {
+    grid-area: title;
+    text-align: center;
+    color: $headline-color;
+  }
+  &__item {
+    grid-area: item;
+  }
+  &__item-text {
+    grid-area: item-text;
+  }
+  &__attribute {
+    grid-area: attribute;
+  }
+  &__attribute-value {
+    grid-area: attribute-value;
+  }
+  &__add-btn {
+    grid-area: add-btn;
+  }
+  &__item-name {
+    grid-area: item-name;
+  }
+  &__find-btn {
+    grid-area: find-btn;
+  }
+  &--search {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-areas:
+      "title"
+      "item-name"
+      "find-btn";
+  }
+}
+.input {
+  background-color: $headline-color;
+  border-color: $headline-color;
+  color: $main-color;
+  font-weight: bold;
+  box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+  border-width: 0;
+  padding: 0 5px;
+}
+
+.btn {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  background-color: $btn-color;
+  border-width: 0;
+  color: $btn-text-color;
+  box-shadow: 0 5px 15px -10px rgba(31, 18, 53, 0.6);
+  border-radius: 3px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.result,
+.content {
+  grid-column: 1/-1;
+  background-color: #001e1d;
+  color: $headline-color;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  &__number-info {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: 10px 0;
+  }
+  &__element-desc {
+    padding: 0 5px;
+  }
+}
